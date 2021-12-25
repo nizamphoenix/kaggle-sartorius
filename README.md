@@ -3,16 +3,16 @@ A template repo for new MK ML projects.
 
 ![skeleton](https://i.giphy.com/media/3o6fJ5z2bgCLBshZUA/giphy.webp)
 
-Usage
+Environment Setup
 -----
-To use this template, either follow the documentation in [this confluence page](https://maxkelsen.atlassian.net/wiki/spaces/MAXK/pages/3874095156/Git+Repo+Creation) or hit the green `Use this template` button next to the clone repo button on this page, and continue as normal.
-
-1. Rename the `src` folder to something more project specific (e.g. `edt`/`sst`/`rav`).
-    * Ensure you also change this in `pyproject.toml` and `containers/base/Dockerfile` as well!
-    * This will affect how you import things in your code - e.g. `from edt.helpers.s3 import download_file`
-2. Change the container name in `containers/base`.
-3. Delete any `.gitkeep` files in the empty directories once actual files are created in them.
-4. Remove any redundant/unwanted sections of this README and replace with project-specific documentation.
+conda create --name jnj-sutures-dev python=3.8   
+conda activate jnj-sutures-dev  
+pip install poetry  
+poetry config virtualenvs.create false  
+poetry install  
+pip install ipykernel  
+pip install ipywidgets  
+python -m ipykernel install --name jnj-sutures-dev --display-name jnj-sutures-dev --user  
 
 Installation
 ------------
