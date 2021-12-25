@@ -1,0 +1,55 @@
+[tool.poetry]
+# FIXME Change to project name
+name = "mk-ml-template"
+version = "0.1.0"
+description = "A template for MK ML Projects"
+authors = ["matty-rose <matthew.rose@maxkelsen.com>"]
+# FIXME Change to module directory; can be deleted if same as project name
+packages = [
+    { include = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "~3.8"
+boto3 = "^1.17.12"
+botocore = "^1.20.12"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.2"
+black = "^20.8b1"
+mypy = "^0.812"
+isort = "^5.7.0"
+autoflake = "^1.4"
+flake8 = "^3.8.4"
+pytest-cov = "^2.11.1"
+coverage = "^5.4"
+pre-commit = "^2.10.1"
+nbstripout = "^0.4.0"
+
+[tool.black]
+target-version = ["py37", "py38"]
+line-length = 88
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/'''
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+use_parentheses = true
+line_length = 88
+known_third_party = ["boto3", "botocore"]
+
+[build-system]
+requires = ["poetry_core>=1.1.4"]
+build-backend = "poetry.core.masonry.api"
