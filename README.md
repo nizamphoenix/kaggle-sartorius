@@ -47,7 +47,3 @@ Directory Structure
 └── pyproject.toml          <- Project configuration file
 ```
 
-To Do
-----------
-- [ ] Possibly implement an automatic documentation generator for the source code folder (sphinx?)
-- [ ] Add CI build for docker image.
