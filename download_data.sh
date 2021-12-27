@@ -15,3 +15,4 @@ mkdir sartorius-train-tif
 cd ./sartorius-train-tif/
 kaggle datasets download -d ks2019/sartorius-train-tif
 unzip sartorius-train-tif
+
