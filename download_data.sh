@@ -20,4 +20,9 @@ cd /home/ubuntu/kaggle-sartorius/data/raw/sartorius-train-tif/
 kaggle datasets download -d ks2019/sartorius-train-tif
 unzip sartorius-train-tif
 
+mkdir -p /home/ubuntu/kaggle-sartorius/data/raw/cellpose-with-livecell
+cd /home/ubuntu/kaggle-sartorius/data/raw/cellpose-with-livecell/
+kaggle datasets download -d oshbocker/cellpose-with-livecell
+unzip cellpose-with-livecell
+
 cd /home/ubuntu/kaggle-sartorius
